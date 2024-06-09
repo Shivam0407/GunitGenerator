@@ -1,0 +1,50 @@
+/* nav.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #333; /* Change to your desired background color */
+  color: white; /* Change to your desired text color */
+}
+
+.heading {
+  flex-grow: 1;
+  text-align: center;
+  padding-right: 2rem;
+}
+
+.navbar-logo {
+  height: 40px; /* Adjust the size as needed */
+}
+
+.navbar-toggle {
+  cursor: pointer;
+  font-size: 24px;
+  display: none; /* Hide by default */
+}
+.nav-link{
+  cursor: pointer;
+}
+.nav-item{
+  text-decoration: none;
+}
+.navbar-nav{
+  list-style-type: none;
+}
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .divHead,
+  .heading {
+    order: unset;
+  }
+}
