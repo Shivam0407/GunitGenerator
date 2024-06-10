@@ -1,35 +1,127 @@
+.gunit-generator-container {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  flex-direction: column; 
+}
+
 .gunit-generator {
-    padding: 20px;
-    margin: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .gunit-generator h2 {
-    margin-bottom: 20px;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  .form-control {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .form-control:focus {
-    border-color: #007bff;
-    outline: none;
-  }
-  
+  width: 80%;
+  height: 80%;
+  max-width: 600px;
+  max-height: 600px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.gunit-generator h2 {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+}
+
+.form-group {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.form-group:last-child {
+  margin-right: 0;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-control {
+  width: 95%;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  outline: none;
+}
+textarea{
+  width: 90%;
+  height: 150px;
+
+}
+
+.custom-dropdown {
+  position: relative;
+  margin: 18px;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin: 10px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  width: 85%;
+  top: calc(100% + 8px);
+  left: 10px;
+  z-index: 1;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.dropdown-menu label {
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.dropdown-menu input[type="checkbox"] {
+  margin-right: 8px;
+}
+.generate-button {
+  margin-top: 20px;
+  margin-left: 10px; /* Add some spacing between the form and the button */
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center; /* Center the button horizontally */
+}
+
+.generate-button:hover {
+  background-color: #0056b3;
+}

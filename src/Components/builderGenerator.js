@@ -3,12 +3,11 @@ import './css/gunit.css'; // Import the CSS file
 import LineOfBusinessSelector from './LineOfBusinessSelector';
 import BusinessForm from './BusinessForm';
 
-const GUnitGenerator = () => {
+const BuilderGenerator = () => {
   const [lineOfBusiness, setLineOfBusiness] = useState("");
   const [showForm, setShowForm] = useState(false);
   const [selectedBuilder, setSelectedBuilder] = useState("");
   const [selectedExposures, setSelectedExposures] = useState([]);
-  const [baseMethod, setBaseMethod] = useState("");
   const [showExposuresDropdown, setShowExposuresDropdown] = useState(false);
 
   const handleChange = (event) => {
@@ -29,10 +28,6 @@ const GUnitGenerator = () => {
     }
   };
 
-  const handleBaseMethodChange = (event) => {
-    setBaseMethod(event.target.value);
-  };
-
   const toggleExposuresDropdown = () => {
     setShowExposuresDropdown(!showExposuresDropdown);
   };
@@ -40,7 +35,7 @@ const GUnitGenerator = () => {
   return (
     <div className="gunit-generator-container">
       <div className="gunit-generator">
-        <h2>GUnit Generator</h2>
+        <h2>Builder Generator</h2>
         <LineOfBusinessSelector
           lineOfBusiness={lineOfBusiness}
           handleChange={handleChange}
@@ -54,17 +49,15 @@ const GUnitGenerator = () => {
             handleBuilderChange={handleBuilderChange}
             selectedExposures={selectedExposures}
             handleExposureChange={handleExposureChange}
-            baseMethod={baseMethod}
-            handleBaseMethodChange={handleBaseMethodChange}
             showExposuresDropdown={showExposuresDropdown}
             toggleExposuresDropdown={toggleExposuresDropdown}
-            showBaseMethod={true}  // Pass a prop to show the base method
+            showBaseMethod={false} // Pass a prop to hide the base method
           />
         )}
-        <button className="generate-button">Generate GUnit</button>
+        <button className="generate-button">Generate Builder</button>
       </div>
     </div>
   );
 };
 
-export default GUnitGenerator;
+export default BuilderGenerator;
